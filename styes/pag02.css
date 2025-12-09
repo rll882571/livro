@@ -1,0 +1,212 @@
+/* ---------------------------------- */
+/* 1. Estilos Globais e do Corpo (Body) */
+/* ---------------------------------- */
+body {
+    background-color: #f0f0f0; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* ---------------------------------- */
+/* 2. Estilo da Folha de Papel */
+/* ---------------------------------- */
+.folha {
+    width: 90%; 
+    max-width: 800px;
+    min-height: 600px;
+    background-color: #ffffff;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+/* ---------------------------------- */
+/* 3. Estilos de Cabeçalho e Título */
+/* ---------------------------------- */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+   
+    padding-bottom: 10px;
+}
+.reading {
+    text-align: center;
+    margin-bottom: 30px;
+   
+    padding-bottom: 10px;
+}
+
+h1 {
+    font-size: 2.0em;
+    color: #444;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+/* ---------------------------------- */
+/* 4. Layout de Duas Colunas (Flexbox) */
+/* ---------------------------------- */
+
+.colunas-principais {
+    display: flex;
+    justify-content: space-between; /* CORREÇÃO PRINCIPAL */
+    width: 100%;
+    margin-top: 20px;
+}
+
+.coluna-bloco {
+    width: 48%;
+    padding: 0;
+}
+
+/* ---------------------------------- */
+/* 5. Estilos das Colunas */
+/* ---------------------------------- */
+
+.header-coluna {
+    text-align: left;
+    margin-bottom: 10px; 
+}
+
+.icone-verbo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.verbo-com-audio {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    gap: 5px; 
+    margin-bottom: 5px;
+}
+
+.verbo-principal {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.passado-simples {
+    margin: 0;
+    font-size: 1em; 
+    font-style: italic; 
+    color: #6a6a6a; 
+}
+
+/* ---------------------------------- */
+/* 6. Frases e Botões */
+/* ---------------------------------- */
+
+.frase-audio, .frase-audio-eng {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start;
+    gap: 10px; 
+    border-bottom: 1px solid #eee;
+    padding: 8px 0;
+    margin-bottom: 5px;
+}
+
+.frase-audio p, .frase-audio-eng p {
+    margin: 0;
+    font-size: 1.1em;
+    white-space: nowrap; 
+}
+
+/* ---------------------------------- */
+/* 7. Ajustes exclusivos da coluna SPEAK */
+/* ---------------------------------- */
+
+.coluna-speak-direita .header-coluna {
+    text-align: right;
+}
+
+.coluna-speak-direita .verbo-com-audio {
+    justify-content: flex-end;
+}
+
+.coluna-speak-direita .frase-audio,
+.coluna-speak-direita .frase-audio-eng {
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    gap: 10px;
+}
+
+/* Botões de áudio */
+.frase-audio button, 
+.verbo-com-audio button,
+.frase-audio-eng button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 5px;
+    transition: color 0.2s;
+    outline: none;
+    flex-shrink: 0; 
+}
+
+.verbo-com-audio button {
+    font-size: 1em;
+    padding: 2px;
+}
+
+.frase-audio button:hover, 
+.verbo-com-audio button:hover, 
+.frase-audio-eng button:hover {
+    color: #0056b3;
+}
+.flag-icon {
+    width: 30px; /* Define a largura pequena para o ícone */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 8px; /* Adiciona um pequeno espaço entre a bandeira e a frase */
+    flex-shrink: 0; /* Impede que a imagem encolha se houver pouco espaço */
+}
+
+/* ---------------------------------- */
+/* 8. Responsividade */
+/* ---------------------------------- */
+
+@media (max-width: 650px) {
+
+    .folha {
+        width: 100%;
+        padding: 20px;
+        box-shadow: none;
+        margin: 0;
+        min-height: 100vh;
+    }
+    
+    body {
+        padding: 0;
+    }
+    
+    .colunas-principais {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .coluna-bloco {
+        width: 100%;
+        padding: 0;
+        margin: 0 !important;
+    }
+
+    .coluna-speak-direita .header-coluna,
+    .coluna-speak-direita .verbo-com-audio,
+    .coluna-speak-direita .frase-audio,
+    .coluna-speak-direita .frase-audio-eng {
+        text-align: right;
+        justify-content: flex-start;
+        flex-direction: row; 
+    }
+}
