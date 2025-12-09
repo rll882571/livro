@@ -53,6 +53,33 @@ h1 {
 /* 4. Layout de Duas Colunas (Flexbox) */
 /* ---------------------------------- */
 
+.next-container {
+    width: 100%;
+    display: flex;
+    justify-content:flex-end;
+    margin-top: -40px;
+}
+
+.next-btn {
+    background-color: #4CAF50; /* verde suave */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.next-btn:hover {
+    background-color: #45A049;
+    transform: scale(1.05);
+}
+
+.next-btn:active {
+    transform: scale(0.97);
+}
 .colunas-principais {
     display: flex;
     justify-content: space-between; /* CORREÇÃO PRINCIPAL */
@@ -64,7 +91,33 @@ h1 {
     width: 48%;
     padding: 0;
 }
+.before-container {
+    width: 100%;
+    display: flex;
+    justify-content:flex-start;
+    margin-top: 0;
+}
 
+.next-btn {
+    background-color: #4CAF50; /* verde suave */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.next-btn:hover {
+    background-color: #45A049;
+    transform: scale(1.05);
+}
+
+.next-btn:active {
+    transform: scale(0.97);
+}
 /* ---------------------------------- */
 /* 5. Estilos das Colunas */
 /* ---------------------------------- */
