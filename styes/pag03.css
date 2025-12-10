@@ -1,3 +1,5 @@
+
+
 /* ---------------------------------- */
 /* 1. Estilos Globais e do Corpo (Body) */
 /* ---------------------------------- */
@@ -141,56 +143,6 @@ h1 {
     white-space: nowrap; 
 }
 
-/* ---------------------------------- */
-/* 7. Ajustes exclusivos da coluna SPEAK */
-/* ---------------------------------- */
-
-.coluna-speak-direita .header-coluna {
-    text-align: right;
-}
-
-.coluna-speak-direita .verbo-com-audio {
-    justify-content: flex-end;
-}
-
-.coluna-speak-direita .frase-audio,
-.coluna-speak-direita .frase-audio-eng {
-    justify-content: flex-end;
-    flex-direction: row-reverse;
-    gap: 10px;
-}
-
-/* Botões de áudio */
-.frase-audio button, 
-.verbo-com-audio button,
-.frase-audio-eng button {
-    background: none;
-    border: none;
-    color: #007bff;
-    cursor: pointer;
-    font-size: 1.2em;
-    padding: 5px;
-    transition: color 0.2s;
-    outline: none;
-    flex-shrink: 0; 
-}
-
-.verbo-com-audio button {
-    font-size: 1em;
-    padding: 2px;
-}
-
-.frase-audio button:hover, 
-.verbo-com-audio button:hover, 
-.frase-audio-eng button:hover {
-    color: #0056b3;
-}
-.flag-icon {
-    width: 30px; /* Define a largura pequena para o ícone */
-    height: auto; /* Mantém a proporção da imagem */
-    margin-right: 8px; /* Adiciona um pequeno espaço entre a bandeira e a frase */
-    flex-shrink: 0; /* Impede que a imagem encolha se houver pouco espaço */
-}
 
 /* ---------------------------------- */
 /* 8. Responsividade */
@@ -234,4 +186,41 @@ h1 {
         justify-content: flex-start;
         flex-direction: row; 
     }
+}
+
+
+.exercicio {
+    
+    
+   
+border-radius: 10px;
+    
+}
+.embaralhada {
+    font-weight: bold;
+    color: #444;
+}
+.resposta {
+    width: 110%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    
+    font-size: 16px;
+}
+.checkBtn {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.checkBtn:hover {
+    background: #004fcc;
+}
+
+.feedback {
+    margin-top: 10px;
+    font-weight: bold;
 }
